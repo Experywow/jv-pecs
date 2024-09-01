@@ -17,11 +17,9 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
         if (type == Bulldozer.class) {
             machineProducer = new BulldozerProducer();
-        }
-        if (type == Excavator.class) {
+        } else if (type == Excavator.class) {
             machineProducer = new ExcavatorProducer();
-        }
-        if (type == Truck.class) {
+        } else if (type == Truck.class) {
             machineProducer = new TruckProducer();
         }
         if (machineProducer != null) {
